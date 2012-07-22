@@ -2,7 +2,9 @@
       
 The _express-messages_ module provides flash notification rendering. To use simply assign it to a dynamic helper:
 
-    app.dynamicHelpers({ messages: require('express-messages') });
+    app.use(function (req, res) {
+      res.locals.messages = require('express-messages') 
+    });
 
 ## Installation
 
